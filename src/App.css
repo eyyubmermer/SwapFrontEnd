@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home,
+.farm {
   display: flex;
-  flex-direction: column;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 3rem;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 575px;
+  height: 300px;
+  background: #f1f1f1;
+  margin: 100px auto 0;
+  word-break: break-all;
+}
+
+.bloc-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #ffff;
+
+}
+
+.tabs {
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  background-color: rgb(152, 82, 152);
+  letter-spacing: 1px;
+  font-weight: 200;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active-tabs {
+  border-bottom: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  background-color: rgb(182, 96, 182);
+  color: white
+}
+
+
+.button {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px;
+  transition: 0.5s;
+}
+
+.button:hover {
+  box-shadow: rgba(182, 96, 182, 0.35) 0px 5px 15px;
+}
+
+.content-tabs {
+  flex-grow: 1;
+}
+
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+
+.content p {
+  width: 100%;
+  height: 100%;
+}
+
+.active-content {
+  display: block;
 }
